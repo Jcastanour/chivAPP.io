@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservar Viaje - Reservas Chivas</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>Reservas Chivas</h1>
+        <nav>
+            <button onclick="window.location.href='../index.html'">Menu principal</button>    
+        </nav>
+    </header>
+
+    <main>
+        <section id="reservation-section">
+            <h2>Detalles de la Reserva</h2>
+            <div id="reservation-details">
+                <p>Origen: <span id="origenReserva"></span></p>
+                <p>Destino: <span id="destinoReserva"></span></p>
+                <p>Fecha: <span id="fechaReserva"></span></p>
+                <p>Cantidad de Pasajeros: <span id="cantidadPasajerosReserva"></span></p>
+                <p>Precio: <span id="precioReserva"></span></p>
+                <button onclick="window.location.href='payment.html'">Proceder al Pago</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ChivAPP. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="scriptreserva.js"></script>
+</body>
+</html>

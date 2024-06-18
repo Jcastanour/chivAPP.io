@@ -1,0 +1,280 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #004080;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+footer {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+nav button {
+    border: none;
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+    background-color: #00c914;
+    color: white;
+}
+
+a {
+    text-decoration: none; 
+    color: inherit;
+}
+main {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+}
+
+#search-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+#search-section h2 {
+    /* Estilos que deseas aplicar al <h2> dentro de #search-section */
+    color: #004080; /* Ejemplo de estilo */
+    font-size: 24px; /* Ejemplo de estilo */
+    text-align: center;
+    margin-top: 0;
+}
+
+#search-section:hover{
+    box-shadow: 0px 25px 35px rgba(0, 0, 0, 0.3);
+}
+
+#search-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#search-form label {
+    margin: 10px 0 5px;
+}
+
+#search-form input,
+#search-form select,
+#search-form button {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+#search-form button {
+    background-color: #004080;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search-form button:hover {
+    background-color: #00c914;
+}
+
+button:disabled {
+    background-color: #ccc; /* Color de fondo gris cuando está deshabilitado */
+    color: #666; /* Color de texto gris cuando está deshabilitado */
+    cursor: not-allowed !important;
+    opacity: 0.6; /* Opacidad reducida cuando está deshabilitado */
+    transition: background-color 0.3s ease;
+}
+
+#search-form button:disabled:hover {
+    background-color: #666;
+}
+
+#image-section {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    text-align: center;
+}
+
+#image-section:hover{
+    box-shadow: 0px 25px 35px rgba(0, 0, 0, 0.3);
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between; /* Espacio uniforme entre las imágenes */
+    gap: 10px;
+}
+
+#image-section button{
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    background-color: #004080;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#image-section button:hover {
+    background-color: #00c914;
+}
+
+#origen-image,
+#destino-image {
+    width: auto; /* Ancho máximo para las imágenes */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que exceda el contenedor */
+    height: auto; /* Altura automática para mantener la proporción */
+    border-radius: 8px; /* Bordes redondeados para suavizar la apariencia */
+    display: flex; /* Utilizamos flexbox para centrar la imagen */
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc; /* Borde para visualización */
+    transition: transform 0.8s ease;
+}
+
+
+#origen-image img,
+#destino-image img {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho máximo */
+    max-height: 100%; /* Asegura que la imagen no exceda la altura máxima */
+    width: 200px;
+    height: 200px;
+    display: block; /* Elimina espacio adicional debajo de la imagen */
+}
+
+.image-box:hover #origen-image img,
+.image-box:hover #destino-image img {
+    transform: scale(1.1); /* Efecto de escala al hacer hover */
+}
+
+#origen-name,
+#destino-name {
+    margin-top: 10px; /* Espacio superior entre la imagen y el nombre */
+    font-weight: bold; /* Texto en negrita */
+    text-align: center; /* Centrado horizontal del texto */
+    color: #000000; /* Color del texto */
+    font-size: 16px; /* Tamaño de fuente */
+    text-transform: uppercase; /* Convertir texto a mayúsculas */
+    letter-spacing: 1px; /* Espaciado entre letras */
+}
+
+/*Login CSS*/
+
+#login-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#login-section h2 {
+    margin-top: 0;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#login-form label {
+    margin: 10px 0 5px;
+}
+
+#login-form input,
+#login-form button {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#login-form button {
+    background-color: #004080;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#login-form button:hover {
+    background-color: #00c914;
+}
+
+/* Reserva CSS*/
+
+/* Estilos adicionales para la página de reserva */
+
+#reservation-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#reservation-section h2 {
+    color: #004080;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 0;
+}
+
+#reservation-details {
+    margin-top: 20px;
+}
+
+#reservation-details p {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+#reservation-details button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #004080;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#reservation-details button:hover {
+    background-color: #00c914;
+}
