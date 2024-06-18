@@ -198,6 +198,10 @@ function validarYMostrarImagenes() {
         alert('El número de pasajeros no puede ser menor de 1.');
         document.getElementById('passengers').value = '';
         return;
+    } else if (isNaN(numPasajeros)){
+        alert('Solo se puede ingresar numeros.');
+        document.getElementById('passengers').value = '';
+        return;
     }
 
     mostrarImagenes();
