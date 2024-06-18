@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagar Reserva - Reservas Chivas</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
     <header>
-        <h1>Reservas Chivas</h1>
+        <h1><a href="../index.html">Reservas Chivas</a></h1>
     </header>
 
     <main>
         <section id="payment-section">
             <h2>Pagar Reserva</h2>
-            <form id="payment-form" action="confirmation.html" method="POST">
+            
+            <form id="payment-form">
                 <label for="card-number">Número de Tarjeta:</label>
                 <input type="text" id="card-number" name="card-number" required>
                 
@@ -26,6 +27,9 @@
                 
                 <button type="submit">Pagar</button>
             </form>
+            <section class="QR">
+                <img src="../images/qr.jpg" alt="imagenqr">
+            </section>
         </section>
     </main>
 

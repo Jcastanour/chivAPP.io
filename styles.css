@@ -46,6 +46,7 @@ a {
     text-decoration: none; 
     color: inherit;
 }
+
 main {
     padding: 20px;
     display: grid;
@@ -55,6 +56,7 @@ main {
 
 @media (min-width: 768px) {
     main {
+    
         grid-template-columns: 1fr auto; /* Adjust for larger screens */
     }
 }
@@ -281,4 +283,66 @@ button:disabled {
 
 #reservation-details button:hover {
     background-color: #00c914;
+}
+
+/* CSS PAGOS */
+/* Estilos para el formulario de pago */
+#payment-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#payment-section h2 {
+    color: #004080;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 0;
+}
+
+#payment-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#payment-form label {
+    margin: 10px 0 5px;
+}
+
+#payment-form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#payment-form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #004080;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#payment-form button:hover {
+    background-color: #00c914;
+}
+
+.QR {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.QR img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }

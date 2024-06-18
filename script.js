@@ -35,6 +35,16 @@ document.addEventListener("DOMContentLoaded", function() {
     checkForm(); 
 });
 
+document.addEventListener('keyup', function(event) {
+    if (event.key === 'Enter') {
+        // Verificar si el foco está en el campo de pasajeros
+        if (document.activeElement.id === 'passengers') {
+            validarYMostrarImagenes();
+        }
+    }
+});
+
+
 
 const dateInput = document.getElementById('departure-date');
 
@@ -102,7 +112,6 @@ function calcularPrecioChiva(origen, destino) {
 
 // Función para mostrar la imagen según la selección
 function mostrarImagenes() {
-
     // Obtener el valor seleccionado de los selectores
     const origenSeleccionado = origenSelect.value;
     const destinoSeleccionado = destinoSelect.value;
@@ -178,6 +187,22 @@ function mostrarImagenes() {
     }
 }
 
+function validarYMostrarImagenes() {
+    const numPasajeros = parseInt(document.getElementById('passengers').value);
+
+    if (numPasajeros > 10) {
+        alert('El número de pasajeros no puede ser mayor de 10.');
+        document.getElementById('passengers').value = '';
+        return;
+    } else if (numPasajeros < 1){
+        alert('El número de pasajeros no puede ser menor de 1.');
+        document.getElementById('passengers').value = '';
+        return;
+    }
+
+    mostrarImagenes();
+    
+}
 function reserva() {
     // Obtener valores del formulario
     var origen = origenSelect.value;
