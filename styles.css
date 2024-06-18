@@ -49,8 +49,14 @@ a {
 main {
     padding: 20px;
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr;
     gap: 20px;
+}
+
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: 1fr auto; /* Adjust for larger screens */
+    }
 }
 
 #search-section {
@@ -165,7 +171,7 @@ button:disabled {
     justify-content: center;
     align-items: center;
     border: 1px solid #ccc; /* Borde para visualización */
-    transition: transform 0.8s ease;
+    transition: transform 0.3s ease;
 }
 
 
@@ -192,6 +198,10 @@ button:disabled {
     font-size: 16px; /* Tamaño de fuente */
     text-transform: uppercase; /* Convertir texto a mayúsculas */
     letter-spacing: 1px; /* Espaciado entre letras */
+}
+
+@media (max-width: 768px) {
+    /* CSS rules for smaller screens */
 }
 
 /*Login CSS*/
